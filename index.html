@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070707">
+  <meta property="og:title" content="Graduación 2026 · Generación 2020–2026">
+  <meta property="og:description" content="Acompáñanos a celebrar el cierre de una etapa inolvidable.">
+  <meta property="og:image" content="assets/hero.webp">
+  <title>Graduación 2026 · Generación 2020–2026</title>
+  <link rel="preload" href="assets/hero.webp" as="image">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="sparkles" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <div class="hero-photo"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content reveal visible">
+      <div class="pill">GENERACIÓN 2020–2026</div>
+      <h1>Felicidades<br><span>Graduados</span></h1>
+      <p>Una etapa termina. Una nueva historia comienza.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#historia">Comenzar la experiencia</a>
+        <button class="btn btn-glass" id="shareBtn">Compartir invitación</button>
+      </div>
+    </div>
+    <a class="down" href="#historia" aria-label="Continuar">⌄</a>
+  </header>
+
+  <main>
+    <section id="historia" class="section">
+      <div class="kicker">NUESTRA HISTORIA</div>
+      <h2>Hace seis años llegaron con mochilas casi más grandes que ellos.</h2>
+      <div class="timeline">
+        <article class="glass reveal"><b>1.º</b><h3>El primer paso</h3><p>Con nervios, emoción y una mano adulta sosteniéndolos fuerte, comenzaron un camino que entonces parecía inmenso.</p></article>
+        <article class="glass reveal"><b>2.º–3.º</b><h3>Descubrir el mundo</h3><p>Aprendieron a leer, a sumar, a preguntar y a descubrir que cada respuesta podía abrir la puerta a una nueva curiosidad.</p></article>
+        <article class="glass reveal"><b>4.º–5.º</b><h3>Crecer juntos</h3><p>Enfrentaron retos, hicieron amistades, encontraron talentos y comprendieron que aprender también significa levantarse y volver a intentar.</p></article>
+        <article class="glass reveal"><b>6.º</b><h3>Listos para volar</h3><p>Hoy no solo concluyen la primaria. Se llevan recuerdos, confianza y sueños suficientes para comenzar una nueva aventura.</p></article>
+      </div>
+    </section>
+
+    <section class="section event-section">
+      <div class="event-card glass reveal">
+        <div>
+          <div class="kicker">CELEBREMOS JUNTOS</div>
+          <h2>14 de julio de 2026</h2>
+          <p class="time">17:00 horas</p>
+        </div>
+        <div class="line"></div>
+        <div>
+          <h3>Salón Royal Libeage</h3>
+          <p>Calle Física No. 96, Col. Palmas<br>Municipio de Nezahualcóyotl<br>Estado de México</p>
+          <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Calle+F%C3%ADsica+96+Colonia+Palmas+Nezahualc%C3%B3yotl+Estado+de+M%C3%A9xico">Ver ubicación ↗</a>
+        </div>
+      </div>
+      <div class="countdown glass reveal">
+        <div><strong id="days">00</strong><span>Días</span></div>
+        <div><strong id="hours">00</strong><span>Horas</span></div>
+        <div><strong id="minutes">00</strong><span>Minutos</span></div>
+        <div><strong id="seconds">00</strong><span>Segundos</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">UN VIAJE EN IMÁGENES</div>
+      <h2>De sus primeros pasos a este gran logro.</h2>
+      <p class="intro">Cada fotografía guarda una pequeña parte del camino recorrido.</p>
+      <div id="gallery" class="gallery"></div>
+    </section>
+
+    <section class="section">
+      <div class="kicker">GENERACIÓN 2020–2026</div>
+      <h2>Veintinueve historias. Un mismo logro.</h2>
+      <div id="names" class="names glass reveal"></div>
+    </section>
+
+    <section class="section families">
+      <div class="family-card glass reveal">
+        <p>Gracias por acompañarlos en cada tarea, cada desvelo, cada festival, cada examen y cada abrazo cuando las cosas parecían difíciles.</p>
+        <strong>Este logro también es suyo.</strong>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="finale-content reveal">
+        <div class="kicker">FELICIDADES POR ESTE GRAN LOGRO</div>
+        <h2>Que cada nuevo comienzo los encuentre soñando en grande.</h2>
+        <p>Generación 2020–2026</p>
+        <div class="actions">
+          <a class="btn btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/5215571308758?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20la%20graduaci%C3%B3n%20de%20la%20Generaci%C3%B3n%202020%E2%80%932026.%20Nombre%20de%20la%20familia%3A%20">Confirmar asistencia por WhatsApp</a>
+          <button id="calendarBtn" class="btn btn-gold">Agregar al calendario</button>
+          <button id="shareBtn2" class="btn btn-glass">Compartir</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="lightbox">
+    <button id="closeLightbox" aria-label="Cerrar">×</button>
+    <img id="lightboxImg" alt="">
+    <div class="modal-caption"><h3 id="lightboxName"></h3><p>Generación 2020–2026</p></div>
+  </dialog>
+
+  <footer>Una etapa termina. Una nueva historia comienza.</footer>
+
+  <script>
+    window.GALLERY = [{"key": "MEGAN", "name": "Megan Livier Álvarez Retana", "images": ["assets/graduados/megan-1.webp", "assets/graduados/megan-2.webp"]}, {"key": "ARMANDO", "name": "Armando Caña Bermúdez", "images": ["assets/graduados/armando-1.webp", "assets/graduados/armando-2.webp"]}, {"key": "DANA", "name": "Dana Carrasco Pérez", "images": ["assets/graduados/dana-1.webp", "assets/graduados/dana-2.webp"]}, {"key": "FERNANDA", "name": "Fernanda Nicole Flores Déciga", "images": ["assets/graduados/fernanda-1.webp", "assets/graduados/fernanda-2.webp"]}, {"key": "LLUVIA", "name": "Lluvia Scarlett Flores Pavón", "images": ["assets/graduados/lluvia-1.webp", "assets/graduados/lluvia-2.webp"]}, {"key": "BAYRON", "name": "Byron Yadiel Gaspar Nolasco", "images": ["assets/graduados/bayron-1.webp", "assets/graduados/bayron-2.webp"]}, {"key": "PAULA", "name": "Paula Abigail González Cortina", "images": ["assets/graduados/paula-1.webp", "assets/graduados/paula-2.webp"]}, {"key": "FRANCISCO", "name": "Francisco Guzmán Luna", "images": ["assets/graduados/francisco-1.webp", "assets/graduados/francisco-2.webp"]}, {"key": "FATIMA", "name": "Fátima Guadalupe López Jiménez", "images": ["assets/graduados/fatima-1.webp", "assets/graduados/fatima-2.webp"]}, {"key": "ZOE", "name": "Zoe Valentina Maldonado Gutiérrez", "images": ["assets/graduados/zoe-1.webp"]}, {"key": "URIEL", "name": "Uriel Aldahir Maravillas Cardoso", "images": ["assets/graduados/uriel-1.webp", "assets/graduados/uriel-2.webp"]}, {"key": "ARIANNA", "name": "Arianna Martínez Quirasco", "images": ["assets/graduados/arianna-1.webp"]}, {"key": "MIA", "name": "Mia Izel Minor Gómez", "images": ["assets/graduados/mia-1.webp", "assets/graduados/mia-2.webp"]}, {"key": "SERGIO", "name": "Sergio Yael Mora Álvarez", "images": ["assets/graduados/sergio-1.webp", "assets/graduados/sergio-2.webp"]}, {"key": "RENATA", "name": "Renata Obregón Ávila", "images": ["assets/graduados/renata-1.webp", "assets/graduados/renata-2.webp"]}, {"key": "ANDREA", "name": "Andrea Nicol Odiozola Martínez", "images": ["assets/graduados/andrea-1.webp", "assets/graduados/andrea-2.webp"]}, {"key": "LIZBETH", "name": "Lizbeth Monserrat Osorio Gómez", "images": ["assets/graduados/lizbeth-1.webp", "assets/graduados/lizbeth-2.webp"]}, {"key": "MICHELL", "name": "Nataly Michell Pérez Morano", "images": ["assets/graduados/michell-1.webp", "assets/graduados/michell-2.webp"]}, {"key": "NICOLAS", "name": "Nicolás Ramírez Bárcenas", "images": ["assets/graduados/nicolas-1.webp", "assets/graduados/nicolas-2.webp"]}, {"key": "ALONDRA", "name": "Alondra Paulette Ramírez Vázquez", "images": ["assets/graduados/alondra-1.webp", "assets/graduados/alondra-2.webp"]}, {"key": "VANIA", "name": "Vania Michelle Reyes Valdez", "images": ["assets/graduados/vania-1.webp", "assets/graduados/vania-2.webp"]}, {"key": "RICARDO", "name": "Ricardo Emmanuel Romero Ávila", "images": ["assets/graduados/ricardo-1.webp", "assets/graduados/ricardo-2.webp"]}, {"key": "DIEGO", "name": "Diego Eduardo Saavedra Castelán", "images": ["assets/graduados/diego-1.webp", "assets/graduados/diego-2.webp"]}, {"key": "REBECA", "name": "Rebeca Salvador Crisóstomo", "images": ["assets/graduados/rebeca-1.webp", "assets/graduados/rebeca-2.webp"]}, {"key": "KIMBERLY", "name": "Kimberly Vianey Santana Fuentes", "images": ["assets/graduados/kimberly-1.webp", "assets/graduados/kimberly-2.webp"]}, {"key": "ENRIQUE", "name": "Enrique Didier Villegas Márquez", "images": ["assets/graduados/enrique-1.webp", "assets/graduados/enrique-2.webp"]}];
+    window.GRADUATES = ["Álvarez Retana Megan Livier", "Caña Bermúdez Armando", "Carrasco Pérez Dana", "Fernández Osorio Sofía Valeria", "Flores Déciga Fernanda Nicole", "Flores Pavón Lluvia Scarlett", "Gaspar Nolasco Byron Yadiel", "González Cortina Paula Abigail", "Guzmán Luna Francisco", "López Jiménez Fátima Guadalupe", "Maldonado Gutiérrez Zoe Valentina", "Maravillas Cardoso Uriel Aldahir", "Martínez Quirasco Arianna", "Minor Gómez Mia Izel", "Mora Álvarez Sergio Yael", "Obregón Ávila Renata", "Odiozola Martínez Andrea Nicol", "Osorio Gómez Lizbeth Monserrat", "Pérez Morano Nataly Michell", "Pérez Pavón Ailin Melissa", "Ramírez Bárcenas Nicolás", "Ramírez Vázquez Alondra Paulette", "Reyes Valdez Vania Michelle", "Romero Ávila Ricardo Emmanuel", "Saavedra Castelán Diego Eduardo", "Salvador Crisóstomo Rebeca", "Santana Fuentes Kimberly Vianey", "Villegas Bustamante Dulce Ximena", "Villegas Márquez Enrique Didier"];
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
