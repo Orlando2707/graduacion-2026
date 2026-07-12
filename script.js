@@ -1,4 +1,13 @@
 
+const music=document.querySelector("#bgMusic");
+const musicToggle=document.querySelector("#musicToggle");
+const introScreen=document.querySelector("#introScreen");
+const enterBtn=document.querySelector("#enterBtn");
+async function startMusic(){try{music.volume=.28;await music.play();musicToggle.classList.add("playing");musicToggle.textContent="❚❚"}catch(e){musicToggle.textContent="♫"}}
+enterBtn.addEventListener("click",async()=>{introScreen.classList.add("hidden");await startMusic()});
+musicToggle.addEventListener("click",async()=>{if(music.paused){await startMusic()}else{music.pause();musicToggle.classList.remove("playing");musicToggle.textContent="♫"}});
+
+
 const $=s=>document.querySelector(s);
 const gallery=$("#gallery");
 window.GALLERY.forEach(item=>{
