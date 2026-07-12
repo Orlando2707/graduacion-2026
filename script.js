@@ -41,7 +41,7 @@ DTSTAMP:20260711T120000Z
 DTSTART:20260714T230000Z
 DTEND:20260715T030000Z
 SUMMARY:Graduación Generación 2020–2026
-LOCATION:Salón Royal Libeage, Calle Física No. 96, Col. Palmas, Nezahualcóyotl, Estado de México
+LOCATION:Salón Royal Liberage, Calle Física núm. 96, Col. Las Palmas, Nezahualcóyotl, Estado de México
 DESCRIPTION:Celebración de graduación de sexto grado.
 END:VEVENT
 END:VCALENDAR`;const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="graduacion-2026.ics";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)};
